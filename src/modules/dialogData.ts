@@ -1,5 +1,5 @@
 import { Dialog } from '@dcl/npc-scene-utils'
-import { alice, bob, charlie } from '../game'
+import { alice, bob, charlie, ExpSystem} from '../game'
 
 export const AliceDialog: Dialog[] = [
   {
@@ -10,6 +10,7 @@ export const AliceDialog: Dialog[] = [
     isQuestion: true,
     buttons: [
       { label: 'Yes', goToDialog: 3 },
+      
       { label: 'No', goToDialog: 2 },
     ],
   },
@@ -23,6 +24,9 @@ export const AliceDialog: Dialog[] = [
   {
     text:
       'We’re currently in the center of the Genesis City map, the roads fan out in all directions from here.',
+     // triggeredByNext: () => {
+     // alice.playAnimation('Goodbye', true, 2)
+    //},   
   },
   {
     text:
