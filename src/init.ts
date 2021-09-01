@@ -39,6 +39,7 @@ export class ExpSystem {
 }
 */
 
+
 //NPC PICAZO OP
 //Iniciamos la funcion loadNPC creando una entidad padre,
 //constantes para los glbs de las animaciones
