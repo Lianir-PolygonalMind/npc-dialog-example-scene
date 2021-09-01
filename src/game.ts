@@ -3,7 +3,7 @@ import { TagComponent } from "./imports/index"
 
 var entity19028 = new Entity("COG")
 engine.addEntity(entity19028)
-entity19028.addComponent(new Transform({ position: new Vector3(16, 0, 16) }))
+entity19028.addComponent(new Transform({ position: new Vector3(5, 1, 5) }))
 entity19028.getComponent(Transform).rotation.set(0, 1, 0, 0)
 entity19028.getComponent(Transform).scale.set(1, 1, 1)
 

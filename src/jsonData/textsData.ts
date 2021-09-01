@@ -335,6 +335,102 @@ export const textDialogs: Dialog[] = [
     },
 ]
 
+/*   DIALOG TEXT BOSON
+//0
+  {
+    text: "Hola aventurero, bienvenido al laberinto",
+    triggeredByNext: () => {
+      alice.questCompleted=false;
+    },
+  },
+  //1
+  {
+    text: 'Perdi mis baterias y estoy atrapado aqui, me temo q tu tambien =(, si me ayudas podre sacarte de aqui, pero debes ser rapido.',
+    isQuestion: true,
+    buttons: [
+      { label: 'Yes', goToDialog: 3, },
+      
+      { label: 'No', goToDialog: 2 },
+    ],
+  },
+  //2
+  {
+    text: "Ok, si cambias de opinion, ven a hablar conmigo",
+    isEndOfDialog: true,
+    triggeredByNext: () => {
+      alice.playAnimation('Goodbye', true, 2)
+    },
+    
+  },
+  //3
+  { 
+    text:
+      'Solo tienes que encontrar las 5 baterias y traermelas aquí', 
+      triggeredByNext: () => {
+        alice.playAnimation('Goodbye', true, 2)
+        alice.indexDialog=4;
+        console.log('mision empezada');
+      },
+    isEndOfDialog: true,  
+  },
+  //4 Quest started
+  {
+    text: "Aun te faltan baterias, son 5, sigue buscando!",
+    isEndOfDialog: true,
+  },
+  //5 Quest completed
+  {
+    text: "Encontraste todas las piezas enhorabuena!",
+  },
+  //6 
+  {
+    text: "Aqui tienes tu recompensa",
+    triggeredByNext: () => {        
+      //expBar.addComponent(new OnPointerDown(e => {
+      if (expBar.valueAsNum+0.25<=1){
+        expBar.increase(0.25)
+        //console.log(expBar.valueAsNum);
+      }
+      
+      else if (expBar.valueAsNum+0.25 > 1) {
+        expBar.valueAsNum = (expBar.valueAsNum +0.25) -1;
+        expBar.set(expBar.valueAsNum)
+        //expBar = new ui.UIBar((0+expBar.valueAsNum)/1000, -30, 600, Color4.Blue(), ui.BarStyles.ROUNDSILVER, 1)
+        //lvl up
+        //console.log(expBar.valueAsNum);
+      } 
+   },
+  },
+  //7
+  { 
+    text:
+      'Ademas ganaste 25 PTOS de Experiencia!',     
+  },
+  //8
+  {
+    text:
+      "Ahora te sacare de aqui, hasta la proxima!",
+    triggeredByNext: () => {
+      //Teletransporte fuera de scena.
+      alice.indexDialog=9;
+    },
+    isEndOfDialog: true,
+  },
+  //9
+  {
+    text:
+      "Hoy no necesito mas ayuda, vuelve mañana!",
+    isEndOfDialog: true,
+  },
+]
+*/
+
+
+
+
+
+
+
 export function getTextData(dialogId:number, textId:number): Text{
   if (textDialogs[dialogId]) {
     if (textDialogs[dialogId].texts[textId]) {
